@@ -35,47 +35,59 @@
 -------------------------------------------------------------------
 ### Plots
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.001.jpeg)
+![](plots/Manas%20Pratim%20Biswas_monthly.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.002.jpeg)
+![](plots//Crush_monthly.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.003.jpeg)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.004.jpeg)
+![](plots/Overall_monthly.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.005.jpeg)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.006.jpeg)
+![](plots/Manas%20Pratim%20Biswas_daily.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.007.jpeg)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.008.jpeg)
+![](plots/Crush_daily.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.009.jpeg)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.010.jpeg)
+![](plots/Overall_daily.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.011.jpeg)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.012.jpeg)
+![](plots/Manas%20Pratim%20Biswas_week_activity.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.013.jpeg)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.014.jpeg)
+![](plots/Crush_week_activity.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.015.jpeg)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.016.png)
+![](plots/Overall_week_activity.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.017.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.018.png)
+![](plots/Manas%20Pratim%20Biswas_month_activity.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.019.jpeg)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.020.jpeg)
+![](plots/Crush_month_activity.png)
 
-![](images/Aspose.Words.d827ecf1-48a6-4781-bc2e-1a925072b6ac.021.jpeg)
+
+![](plots/Overall_month_activity.png)
+
+
+![](plots/Manas%20Pratim%20Biswas_heatmap.png)
+
+![](plots/Crush_heatmap.png)
+
+![](plots/Overall_heatmap.png)
+
+![](plots/Manas%20Pratim%20Biswas_wordcloud.png)
+
+![](plots/Crush_wordcloud.png)
+
+![](plots/Overall_wordcloud.png)
+
+![](plots/Manas%20Pratim%20Biswas_frequent_words.png)
+
+![](plots/Crush_frequent_words.png)
+
+![](plots/Overall_frequent_words.png)
+
 
 #### Manas Pratim Biswas Emojis
 | Emoji   |   Frequency |
