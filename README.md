@@ -72,19 +72,27 @@
 
 ![](plots/Manas%20Pratim%20Biswas_heatmap.png)
 
+
 ![](plots/Crush_heatmap.png)
+
 
 ![](plots/Overall_heatmap.png)
 
+
 ![](plots/Manas%20Pratim%20Biswas_wordcloud.png)
+
 
 ![](plots/Crush_wordcloud.png)
 
+
 ![](plots/Overall_wordcloud.png)
+
 
 ![](plots/Manas%20Pratim%20Biswas_frequent_words.png)
 
+
 ![](plots/Crush_frequent_words.png)
+
 
 ![](plots/Overall_frequent_words.png)
 
