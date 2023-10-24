@@ -6,6 +6,21 @@ import emoji
 
 extract = URLExtract()
 
+def print_line():
+    print("-------------------------------------------------------------------")
+
+def emoji_helper(selected_user, df):
+  if selected_user != 'Overall':
+    df = df[df['user'] == selected_user]
+
+  emojis = []
+  for message in df['message']:
+    emojis.extend([c for c in message if c in emoji.EMOJI_DATA.keys()])
+
+  emoji_df = pd.DataFrame(Counter(emojis).most_common(len(Counter(emojis))))
+
+  return emoji_df
+
 def fetch_stats(selected_user,df):
 
     if selected_user != 'Overall':
@@ -28,6 +43,53 @@ def fetch_stats(selected_user,df):
         links.extend(extract.find_urls(message))
 
     return num_messages,len(words),num_media_messages,len(links)
+
+def time_to_reply(selected_user,df):
+
+    if selected_user == "Overall":
+        return 0
+
+    df['date'] = pd.to_datetime(df['date'])
+
+    # Sort the DataFrame by 'date'
+    df = df.sort_values(by='date')
+
+    # Calculate the time difference between messages from different users
+    df['time_diff'] = df['date'].diff()
+
+    # Filter out the messages from 'group_notification' and reset the index
+    df_without_grp_notif = df[df['user'] != 'group_notification'].reset_index(drop=True)
+
+    # Calculate the time taken to reply between different users
+    reply_time = df_without_grp_notif[['user', 'time_diff']]
+
+    # print(reply_time.head(20))
+
+    # Remove consecutive occurrences of the same user and keep only the first occurrence
+    mask = reply_time['user'] != reply_time['user'].shift()
+    filtered_df = reply_time[mask]
+
+    # Reset the index
+    filtered_df.reset_index(drop=True, inplace=True)
+    filtered_df['time_diff'] = pd.to_timedelta(filtered_df['time_diff'])
+
+    # print(filtered_df.head(50))
+
+    mean_time_diff = filtered_df.groupby('user')['time_diff'].mean()
+    mean_time_diff = mean_time_diff[selected_user]
+
+    return mean_time_diff
+
+def format_time_diff(mean_time_diff):
+
+    # Convert mean_time_diff to hours, minutes, and seconds
+    mean_time_diff_hours = mean_time_diff.seconds // 3600
+    mean_time_diff_minutes = (mean_time_diff.seconds % 3600) // 60
+    mean_time_diff_seconds = mean_time_diff.seconds % 60
+
+    formatted_mean_time_diff = f"{mean_time_diff_minutes:02d} Minutes : {mean_time_diff_seconds:02d} Seconds"
+
+    return formatted_mean_time_diff
 
 def most_busy_users(df):
     x = df['user'].value_counts().head()
@@ -53,7 +115,7 @@ def create_wordcloud(selected_user,df):
                 y.append(word)
         return " ".join(y)
 
-    wc = WordCloud(width=500,height=500,min_font_size=10,background_color='white')
+    wc = WordCloud(width=1000,height=1000,min_font_size=10,background_color='white')
     temp['message'] = temp['message'].apply(remove_stop_words)
     df_wc = wc.generate(temp['message'].str.cat(sep=" "))
     return df_wc
