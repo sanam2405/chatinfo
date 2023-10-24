@@ -22,7 +22,7 @@
 - Total Media : ```43```
 - Total Links : ```11```
 -------------------------------------------------------------------
-### Statistics for Overall: 
+### Overall Statistics: 
 - Total Messages : ```10309```
 - Total Words : ```85321```
 - Average words per message : ```8.276```
